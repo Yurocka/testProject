@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class TestScripts : MonoBehaviour
 
     void Start()
     {
+
         // простое деление
         float result;
         int x, z;
@@ -16,8 +18,8 @@ public class TestScripts : MonoBehaviour
         x = 10;
         z = 3;
 
-        // result = Convert.ToSingle(x) / z;
-        // print(result);
+        result = Convert.ToSingle(x) / z;
+        print(result);
 
         // определение времени
         int timeInMinets = 130;
@@ -49,7 +51,7 @@ print(accesIsAllowed);
 
 
 string greeting = "Слава ";
-string name = "немного ";
+string name = "точно ";
 string gei = "гей.";
 string message = greeting + name + gei;
 
@@ -61,7 +63,49 @@ string name3 = "Yuri";
 
 print ("Ваше имя " + name3 + " вам " + age3);
 
+ int thunder;
+string lightning = "25";
+thunder = Convert.ToInt32(lightning);
+print(thunder);
 
-    }
+float result1;
+int x1 = 5, y = 2;
+result1 = Convert.ToSingle(x1) / y;
+print(result1);
+
+int trigger = 1;
+bool triggerInBoolean = Convert.ToBoolean(trigger);
+print(triggerInBoolean);
+
+int reconvert = Convert.ToInt32(triggerInBoolean);
+print(reconvert);
+
+
+int i = 0;
+print(i++);
+print(i);
+
+int health;
+int armor;
+int damage;
+int presentConverter = 100;
+
+print("введите количество здоровья: ");
+health = Convert.ToInt32(print());
+print = 1;
+print("введите количество брони: ");
+armor = Convert.ToInt32(1);
+print("введите количество урона: ");
+damage = Convert.ToInt32(print());
+
+health -= damage * armor / presentConverter;
+
+print($"Вам нанесли {damage}урона. У вас осталось {health}здоровья!!!")
+
+
+
+}
+
+
 
 }
