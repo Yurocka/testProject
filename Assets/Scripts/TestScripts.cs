@@ -85,23 +85,37 @@ int i = 0;
 print(i++);
 print(i);
 
-int health;
-int armor;
-int damage;
-int presentConverter = 100;
+// int health;
+// int armor;
+// int damage;
+// int presentConverter = 100;
 
-print("введите количество здоровья: ");
-health = Convert.ToInt32(print());
-print = 1;
-print("введите количество брони: ");
-armor = Convert.ToInt32(1);
-print("введите количество урона: ");
-damage = Convert.ToInt32(print());
+// print("введите количество здоровья: ");
+// health = Convert.ToInt32(print());
+// print = 1;
+// print("введите количество брони: ");
+// armor = Convert.ToInt32(1);
+// print("введите количество урона: ");
+// damage = Convert.ToInt32(print());
 
-health -= damage * armor / presentConverter;
+// health -= damage * armor / presentConverter;
 
-print($"Вам нанесли {damage}урона. У вас осталось {health}здоровья!!!")
+// print($"Вам нанесли {damage}урона. У вас осталось {health}здоровья!!!")
 
+
+// if если | else иначе | else if иначе если...
+int age4;
+age4 = 17;
+if (age4 >= 18)
+{
+    print("добро пожаловать в наш бар!");
+    print("что будете пить?");
+}
+else
+{
+    print("вы слишком юны");
+    print("приходите к нам через: " + (18 - age4) + " лет");
+}
 
 
 }
