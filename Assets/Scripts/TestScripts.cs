@@ -8,7 +8,7 @@ public class TestScripts : MonoBehaviour
     // основные типы данных, языка  C# int (целочисленные) | float (до 7 знаков после запятой) | string (строковый тип string c = "всё что угодно")| bool (логический тип true или false)
     // + - * /%
 
-    void Start()
+    private void Start()
     {
 
         // простое деление
@@ -178,11 +178,43 @@ public class TestScripts : MonoBehaviour
         for (int a = 0; a <= 10; a++)
         {
             print(a);
+            print("нюхай бебру!!!");
         }
 
 
+        int playerHealth = 1004;
+        int playerDamage = 40;
+        int enemiHealth = 700;
+        int enemiDamege = 60;
+
+        while (playerHealth > 0 && enemiHealth > 0)
+        {
+            playerHealth -= enemiDamege;
+            enemiHealth -= playerDamage;
+
+            print(playerHealth + " сэр Даниил.");
+            print(enemiHealth + " офицер Вячеслав.");
+        }
+
+        if (playerHealth <= 0 && enemiHealth <= 0)
+        {
+            print("Ничья.");
+        }
+        else if (enemiHealth <= 0)
+        {
+            print("победа сэра Даниила!!!");
+        }
+        else if (playerHealth <= 0)
+        {
+            print("Победа офицера Вячеслава!!!");
+        }
+        Invoke(nameof(StartDelay), 3f);
+        Invoke("StartDelay", 5f);
+    }
+    private void StartDelay()
+    {
+        print("задержка 3 секунды, успешна!!!");
     }
 
-
-
+    // Invoke(nameof(имя переменной), время задержки) 
 }
